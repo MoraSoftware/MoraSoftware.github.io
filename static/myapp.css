@@ -1,0 +1,56 @@
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+  font-family: 'Merriweather Sans', sans-serif;
+}
+header {
+  background-color: #111;
+  color: #eee;
+  padding: 40px;
+}
+header h1 {
+  text-transform: uppercase;
+  font-size: 50px;
+  letter-spacing: 15px;
+  margin: 0 0 0 4px;
+}
+@media (max-width: 767px) {
+  header h1 {
+    letter-spacing: 5px;
+    font-size: 40px;
+  }
+  .list-inline li {
+    display: list-item;
+  }
+}
+
+header h1 a {
+  color: #eee;
+}
+header h1 a:hover {
+  text-decoration: none;
+}
+header ul {
+  margin: 25px 0 0;
+}
+header ul li {
+  padding-bottom: 20px;
+}
+header ul a {
+  color: #ddd;
+  font-weight: 700;
+}
+header ul a span {
+  color: #888;
+  font-weight: 300;
+  padding-right: 2px;
+}
+header ul a:hover {
+  color: #48b983;
+  text-decoration: none;
+}
+header ul a:hover span {
+  color: #1b8057;
+}

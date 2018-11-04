@@ -41,28 +41,29 @@
                <xmp>val a = 2
                   val b = 5
                   var maxValue: Int = if (a > b) {
-                  print("a is greater")
-                  a
+                    print("a is greater")
+                    a
                   } else {
-                  print("b is greater")
-                  b
+                    print("b is greater")
+                    b
                   }
                   println(maxValue)
                </xmp>
             </div>
             <div id="when" class="tab-pane fade">
                <h3>For</h3>
-               <xmp>for (i in 1..10) {
+               <xmp>
+                for (i in 1..10) {
                   if (i % 2 == 0) {
-                  println(i)
+                    println(i)
                   }
-                  }
+                }
                   println()
-                  for (i in 10 downTo 0) {
+                for (i in 10 downTo 0) {
                   if (i % 2 == 0) {
-                  println(i)
+                    println(i)
                   }
-                  }
+                }
                </xmp>
             </div>
             <div id="string_interpolation" class="tab-pane fade">
@@ -70,18 +71,18 @@
                <xmp>
                   var i = 0
                   while (i <= 10) {
-                  if (i % 2 == 0) {
-                  println(i)
-                  }
-                  i++
+                    if (i % 2 == 0) {
+                      println(i)
+                    }
+                    i++
                   }
                   println()
                   var j = 10
                   while (j >= 0) {
-                  if (j % 2 == 0) {
-                  println(j)
-                  }
-                  j--
+                    if (j % 2 == 0) {
+                      println(j)
+                    }
+                    j--
                   }
                </xmp>
             </div>
@@ -90,18 +91,18 @@
                <xmp>
                   var i = 0
                   do {
-                  if (i % 2 == 0) {
-                  println(i)
-                  }
-                  i++
+                    if (i % 2 == 0) {
+                      println(i)
+                    }
+                    i++
                   } while (i <= 10)
                   println()
                   var j = 10
                   do {
-                  if (j % 2 == 0) {
-                  println(j)
-                  }
-                  j--
+                    if (j % 2 == 0) {
+                      println(j)
+                    }
+                    j--
                   } while (j >= 0)
                </xmp>
             </div>

@@ -34,6 +34,8 @@
             <li><a data-toggle="tab" href="#for">For</a></li>
             <li><a data-toggle="tab" href="#while">While</a></li>
             <li><a data-toggle="tab" href="#do">Do while</a></li>
+            <li><a data-toggle="tab" href="#break_keyword">Break keyword</a></li>
+            <li><a data-toggle="tab" href="#continue_keyword">Continue keyword</a></li>
          </ul>
          <div class="tab-content">
             <div id="if" class="tab-pane fade in active">
@@ -104,6 +106,53 @@
                     }
                     j--
                   } while (j >= 0)
+               </xmp>
+            </div>
+            <div id="break_keyword" class="tab-pane fade">
+               <h3>Break keyword</h3>
+               <xmp>
+                  for (i in 0..4) {
+                    println(i)
+
+                    if (i == 2) {
+                      break
+                    }
+                  }
+
+                  println() 
+
+                  myLoop@ for (i in 1..3) {
+                    for (j in 1..3) {
+                      println("$i  $j")
+                      if (i == 2 && j == 2)
+                        break@myLoop
+                      }
+                    }
+                  }
+               </xmp>
+            </div>
+            <div id="continue_keyword" class="tab-pane fade">
+               <h3>Continue keyword</h3>
+               <xmp>
+                  for (i in 1..3) {
+                  
+                    if (i == 2)
+                      continue
+                    
+                    println(i)
+                  }
+
+
+                  myLoop@ for (i in 1..3) {
+
+                    for (j in 1..3) {
+
+                      if (i == 2 && j == 2) {
+                        continue@myLoop
+                      }
+                      println("$i  $j")
+                    }
+                  }
                </xmp>
             </div>
          </div>

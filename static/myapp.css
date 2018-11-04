@@ -5,6 +5,14 @@ body {
   min-height: 100%;
   font-family: 'Merriweather Sans', sans-serif;
 }
+body {
+        background-color: #111 !important;
+        background: url('static/bg.jpg') no-repeat center center;
+        background-size: cover;
+      }
+      header {
+        background-color: transparent !important;
+      }
 header {
   background-color: #111;
   color: #eee;
@@ -27,7 +35,7 @@ header h1 {
 }
 
 header h1 a {
-  color: #eee;
+  color:  white;
 }
 header h1 a:hover {
   text-decoration: none;
@@ -39,11 +47,11 @@ header ul li {
   padding-bottom: 20px;
 }
 header ul a {
-  color: #ddd;
+  color:  white;
   font-weight: 700;
 }
 header ul a span {
-  color: #888;
+  color:  white;
   font-weight: 300;
   padding-right: 2px;
 }
@@ -53,4 +61,7 @@ header ul a:hover {
 }
 header ul a:hover span {
   color: #1b8057;
+}
+p    {
+  color: red;
 }

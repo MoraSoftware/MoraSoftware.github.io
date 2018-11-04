@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
    <head>
-      <title>Expression Kotlin</title>
+      <title>Loops Kotlin</title>
       <meta charset="utf-8">
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,15 +20,15 @@
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
    </head>
    <body>
-      <div class="container"><div class="block">
+      <div class="container">
+         <div class="block">
             <form action="index.html">
                <input type="image" src="static/white.jpg" />
             </form>
          </div>
          <div class="block">
-            <h2>Expression Kotlin</h2>
+            <h2>Loops in Kotlin</h2>
          </div>
-         
          <ul class="nav nav-tabs">
             <li class="active"><a data-toggle="tab" href="#if">If</a></li>
             <li><a data-toggle="tab" href="#when">When</a></li>
@@ -37,98 +37,73 @@
          </ul>
          <div class="tab-content">
             <div id="if" class="tab-pane fade in active">
-               <h3>Variables data types</h3>
-               <xmp>var myNumber = 10       // Int
-                  var myDecimal = 1.0     // Float
-                  var isActive = true     // Boolean
-                  var myString: String    // Mutable String
-                  myString = "Hello World"
-                  myString = "Another World"
-                  val myAnotherString = "My constant string value"    // Immutable String
-                  //    myAnotherString = "some value"  // NOT ALLOWED, since it is immutable
-
-                  var name: String
-                  name = "Kevin"
-
-                  var age: Int = 10
-                  var myAge = 10
-
-                  var isAlive: Boolean = true
-                  var marks: Float = 97.4F
-                  var percentage: Double = 90.78
-                  var gender: Char = 'M'
+               <h3>If</h3>
+               <xmp>val a = 2
+                  val b = 5
+                  var maxValue: Int = if (a > b) {
+                  print("a is greater")
+                  a
+                  } else {
+                  print("b is greater")
+                  b
+                  }
+                  println(maxValue)
                </xmp>
             </div>
             <div id="when" class="tab-pane fade">
-               <h3>Class</h3>
-               <xmp>var personObj = Person()
-                    personObj.name = "Steve"
-                    print("The name of the person is ${personObj.name}")
-                  class Person {
-                    var name: String = ""
+               <h3>For</h3>
+               <xmp>for (i in 1..10) {
+                  if (i % 2 == 0) {
+                  println(i)
                   }
-               </xmp>
-               <p>Another example</p>
-               <xmp>
-                  fun main(args: Array<String>) {
-                    var personObj = Persson("Steve")
-                    personObj.display()
                   }
-                  class Persson(var name: String ) {
-                    fun display() {
-                      print("The name of the person is ${name}")
-                    }
+                  println()
+                  for (i in 10 downTo 0) {
+                  if (i % 2 == 0) {
+                  println(i)
+                  }
                   }
                </xmp>
             </div>
             <div id="string_interpolation" class="tab-pane fade">
-               <h3>Explore String Interpolation in Kotlin</h3>
+               <h3>WHILE in Kotlin</h3>
                <xmp>
-                fun main(args: Array<String>) {
-
-                var rect = Rectangle()
-                rect.length = 5
-                rect.breadth = 3
-
-                print("The length of the rectangle is ${rect.length} and breadth is ${rect.breadth}. The area is ${rect.length * rect.breadth}")
-
-                }
-
-                class Rectangle {
-
-                  var length: Int = 0
-                  var breadth: Int = 0
-                }
-                </xmp>
+                  var i = 0
+                  while (i <= 10) {
+                  if (i % 2 == 0) {
+                  println(i)
+                  }
+                  i++
+                  }
+                  println()
+                  var j = 10
+                  while (j >= 0) {
+                  if (j % 2 == 0) {
+                  println(j)
+                  }
+                  j--
+                  }
+               </xmp>
             </div>
             <div id="ranges" class="tab-pane fade">
-               <h3>Ranges</h3>
+               <h3>DO WHILE</h3>
                <xmp>
-               fun main(args: Array<String>) {
-
-              var r1 = 1..5
-              // This range contains number 1, 2, 3, 4, 5
-
-              val r2 = 5 downTo 1
-              // This range contains number 5, 4, 3, 2, 1
-
-              val r3 = 5 downTo 1 step 2
-              // This range contains number 5, 3, 1
-
-              val r4 = 'a'..'z'
-              // This range contains the values from "a", "b", "c" . . . "z"
-
-              var isPresent = 'c' in r4
-
-              var countDown = 10.downTo(1)
-              // This range contains number 10, 9, 8, 7, 6, 5, 4, 3, 2, 1
-
-              var moveUp = 1.rangeTo(10)
-              // This range contains number 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
-    
-              }
-                </xmp>
-
+                  var i = 0
+                  do {
+                  if (i % 2 == 0) {
+                  println(i)
+                  }
+                  i++
+                  } while (i <= 10)
+                  println()
+                  var j = 10
+                  do {
+                  if (j % 2 == 0) {
+                  println(j)
+                  }
+                  j--
+                  } while (j >= 0)
+               </xmp>
             </div>
          </div>
       </div>

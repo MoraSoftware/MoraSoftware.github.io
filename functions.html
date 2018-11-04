@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Functions Kotlin</title>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" type="text/css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,300,700" type="text/css">
+      <link rel="stylesheet" href="static/app.css" type="text/css">
+      <link rel="shortcut icon" href="static/logo.png" />
+      <meta name="theme-color" content="#111111">
+      <meta name="og:type" content="website">
+      <meta name="og:title" content="MoraSoftware.github.io">
+      <meta name="og:description" content="Mora Software">
+      <meta name="og:site_name" content="Mora Software">
+      <meta name="og:url" content="{{ site.url }}">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   </head>
+   <body>
+      <div class="container">
+         <div class="block">
+            <form action="index.html">
+               <input type="image" src="static/white.jpg" />
+            </form>
+         </div>
+         <div class="block">
+            <h2>Functions Kotlin</h2>
+         </div>
+         <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#functions_basics">Functions basics</a></li>
+            <li><a data-toggle="tab" href="#functions_as_expressions">Functions as expressions</a></li>
+            <li><a data-toggle="tab" href="#named_parameters">Named parameters</a></li>
+            <li><a data-toggle="tab" href="#extension_function_one">Extension function one</a></li>
+            <li><a data-toggle="tab" href="#extension_function_two">Extension function two</a></li>
+         </ul>
+         <div class="tab-content">
+            <div id="functions_basics" class="tab-pane fade in active">
+               <h3>Functions basics</h3>
+               <xmp>
+                  fun main(args: Array<String>) {
+
+                     var sum = add(2, 4)
+
+                     println("Sum is " + sum)
+                  }
+
+                  fun add(a: Int, b: Int): Int {
+
+                     return a + b
+                  }
+               </xmp>
+            </div>
+            <div id="functions_as_expressions" class="tab-pane fade">
+               <h3>Functions as expressions</h3>
+               <xmp>
+                  fun main(args: Array<String>) {
+
+                     var largeValue = max(4, 6)
+
+                     println("The greater number is $largeValue")
+                  }
+
+                  fun max(a: Int, b: Int): Int = if (a > b) {
+                        println("$a is greater")
+                        a
+                    } else {
+                        println("$b is greater")
+                        b
+                    }
+               </xmp>
+            </div>
+            <div id="named_parameters" class="tab-pane fade">
+               <h3>Named parameters</h3>
+               <xmp>
+                  fun main(args: Array<String>) {
+
+                     var result = findTheVolume(breadth = 2, length = 3)
+                     print(result)
+                  }
+
+                  fun findTheVolume(length: Int, breadth: Int, height: Int = 10): Int {
+
+                     return length * breadth * height
+                  }
+               </xmp>
+            </div>
+            <div id="extension_function_one" class="tab-pane fade">
+               <h3>Extension function one</h3>
+               <xmp>
+                  fun main(args: Array<String>) {
+
+                     var student = Studentt()
+                     println("Pass status: " + student.hasPassed(57))
+
+                     println("Scholarship Status: " + student.isScholar(57))
+                  }
+
+                  fun Studentt.isScholar(marks: Int): Boolean {
+                     return marks > 95
+                  }
+
+                  class Studentt {         // OUR OWN CLASS
+
+                     fun hasPassed(marks: Int): Boolean {
+                        return marks > 40
+                     }
+                  }
+               </xmp>
+            </div>
+            <div id="extension_function_two" class="tab-pane fade">
+               <h3>Extension function two</h3>
+               <xmp>
+                  fun main(args: Array<String>) {
+
+                     var str1: String = "Hello "
+                     var str2: String = "World"
+
+                     var str3: String = "Hey "
+
+                     println(str3.add(str1, str2))
+
+                     val x: Int = 6
+                     val y: Int = 10
+
+                     val greaterVal = x.greaterValue(y)
+
+                     println(greaterVal)
+                  }
+
+                  fun String.add(s1: String, s2: String): String {
+
+                     return this + s1 + s2
+                  }
+
+                  fun Int.greaterValue(other: Int): Int {
+
+                     if (this > other)
+                        return this
+                     else
+                        return other
+                  }
+               </xmp>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>

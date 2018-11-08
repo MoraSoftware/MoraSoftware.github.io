@@ -34,6 +34,7 @@
             <li><a data-toggle="tab" href="#named_parameters">Named parameters</a></li>
             <li><a data-toggle="tab" href="#extension_function_one">Extension function one</a></li>
             <li><a data-toggle="tab" href="#extension_function_two">Extension function two</a></li>
+            <li><a data-toggle="tab" href="#infix_function">Infix function</a></li>
          </ul>
          <div class="tab-content">
             <div id="functions_basics" class="tab-pane fade in active">
@@ -135,6 +136,28 @@
                   }
 
                   fun Int.greaterValue(other: Int): Int {
+
+                     if (this > other)
+                        return this
+                     else
+                        return other
+                  }
+               </xmp>
+            </div>
+            <div id="infix_function" class="tab-pane fade">
+               <h3>Infix function</h3>
+               <xmp>
+                  fun main(args: Array<String>) {
+
+                     val x: Int = 6
+                     val y: Int = 10
+
+                     val greaterVal = x findGreaterValue y   // x.findGreaterValue(y)
+
+                     println(greaterVal)
+                  }
+
+                  infix fun Int.findGreaterValue(other: Int): Int {       // INFIX and Extension Func
 
                      if (this > other)
                         return this

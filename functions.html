@@ -35,6 +35,7 @@
             <li><a data-toggle="tab" href="#extension_function_one">Extension function one</a></li>
             <li><a data-toggle="tab" href="#extension_function_two">Extension function two</a></li>
             <li><a data-toggle="tab" href="#infix_function">Infix function</a></li>
+            <li><a data-toggle="tab" href="#tailrec_function">Tailrec function</a></li>
          </ul>
          <div class="tab-content">
             <div id="functions_basics" class="tab-pane fade in active">
@@ -193,6 +194,26 @@
                <p>Infix Functions can be a Member Function or Extension Function</p>
                <p>They have SINGLE Parameter</p>
                <p>They have prefix of "infix"</p>
+            </div>
+            <div id="infix_function" class="tab-pane fade">
+               <h3>Infix function</h3>
+               <xmp>
+                  fun main(args: Array<String>) {
+
+                     println(getFibonacciNumber(10000, BigInteger("1"), BigInteger("0")))
+                  }
+
+                  tailrec fun getFibonacciNumber(n: Int, a: BigInteger, b: BigInteger): BigInteger {
+
+                     if (n == 0)
+                        return  b
+                     else
+                        return getFibonacciNumber(n - 1, a + b, a)
+                  }
+               </xmp>
+               <hr>
+               <p>Tailrec Function : Recursive Functions</p>
+               <p>* Prevents Stackoverflow Exception</p>
             </div>
          </div>
       </div>

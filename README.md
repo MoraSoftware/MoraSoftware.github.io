@@ -1,4 +1,4 @@
 # MoraSoftware.github.io
-Tutoriak step by step.
+Tutorial step by step.
 
 [Mora Software](http://MoraSoftware.github.io)

@@ -30,7 +30,7 @@
          </div>
          <ul class="nav nav-tabs">
             <li class="active"><a data-toggle="tab" href="#init">Init</a></li>
-            <li><a data-toggle="tab" href="#functions_as_expressions">Functions as expressions</a></li>
+            <li><a data-toggle="tab" href="#inheritance">Inheritance</a></li>
          </ul>
          <div class="tab-content">
             <div id="init" class="tab-pane fade in active">
@@ -38,29 +38,74 @@
                <xmp>
                   fun main(args: Array<String>) {
 
-    var student = Student("Steve", 10)
+                    var student = Student("Steve", 10)
 
-    println(student.id)
-}
+                    println(student.id)
+                  }
 
-class Student(var name: String) {
+                  class Student(var name: String) {
 
-    var id: Int = -1
+                    var id: Int = -1
 
-    init {
-        println("Student has got a name as $name and id is $id")
-    }
+                    init {
+                      println("Student has got a name as $name and id is $id")
+                    }
 
-    constructor(n: String, id: Int): this(n) {
-        // The body of the secondary constructor is called after init block
-        this.id = id
-    }
-}
+                    constructor(n: String, id: Int): this(n) {
+                      // The body of the secondary constructor is called after init block
+                      this.id = id
+                    }
+                  }
                </xmp>
             </div>
-            <div id="functions_as_expressions" class="tab-pane fade">
-               <h3>Functions as expressions</h3>
+            <div id="inheritance" class="tab-pane fade">
+               <h3>Inheritance</h3>
                <xmp>
+                fun main(args: Array<String>) {
+
+                  var dog = Dog()
+                  dog.bread = "labra"
+                  dog.color = "black"
+                  dog.bark()
+                  dog.eat()
+
+                  var cat = Cat()
+                  cat.age = 7
+                  cat.color = "brown"
+                  cat.meow()
+                  cat.eat()
+
+                  var animal = Animal()
+                  animal.color = "white"
+                  animal.eat()
+                }
+
+                open class Animal {         // Super class / Parent class /  Base class
+
+                  var color: String = ""
+
+                  fun eat() {
+                    println("Eat")
+                  }
+                }
+
+                class Dog : Animal() {      // Sub class / Child class / Derived class
+
+                  var bread: String = ""
+
+                  fun bark() {
+                    println("Bark")
+                  }
+                }
+
+                class Cat : Animal() {      // Sub class / Child class / Derived class
+
+                  var age: Int = -1
+
+                  fun meow() {
+                    println("Meow")
+                  }
+                }
                </xmp>
             </div>
          </div>

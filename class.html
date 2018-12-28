@@ -33,6 +33,7 @@
             <li><a data-toggle="tab" href="#inheritance">Inheritance</a></li>
             <li><a data-toggle="tab" href="#override">Override</a></li>
             <li><a data-toggle="tab" href="#InheritanceSecondary">Inheritance Secondary Constructors</a></li>
+            <li><a data-toggle="tab" href="#visibility">Visibility</a></li>
          </ul>
          <div class="tab-content">
             <div id="init" class="tab-pane fade in active">
@@ -188,6 +189,43 @@
                </xmp>
                <hr>
                <p>Inheritance with Primary and Secondary Constructors</p>
+            </div>
+            <div id="visibility" class="tab-pane fade">
+               <h3>Visibility Modifiers</h3>
+               <xmp>
+                
+               open class Person { // Super class
+                private val a = 1
+                protected val b = 2
+                internal val c = 3
+                val a = 10
+               }
+
+               class Indian: Person() { // Sub class
+                
+
+                fun printTest() {
+                  print(a)
+
+                  // a is not visible
+                  // b, c, d are visible
+                }
+               }
+
+               class TestClass {
+                fun testing() {
+                  var person = Person()
+                  print(person.a)
+                  // a, b are not visible
+                  // c, d are visible
+                }
+               }
+               </xmp>
+               <hr>
+               <p>public always is visible</p>
+               <p>protected visible inside sub class, not visible inside other class</p>
+               <p>internal visible from module</p>
+               <p>private just visible from yourClass.kt</p>
             </div>
          </div>
       </div>

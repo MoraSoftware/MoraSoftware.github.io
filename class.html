@@ -34,6 +34,7 @@
             <li><a data-toggle="tab" href="#override">Override</a></li>
             <li><a data-toggle="tab" href="#InheritanceSecondary">Inheritance Secondary Constructors</a></li>
             <li><a data-toggle="tab" href="#visibility">Visibility</a></li>
+            <li><a data-toggle="tab" href="#abstract">Abstract</a></li>
          </ul>
          <div class="tab-content">
             <div id="init" class="tab-pane fade in active">
@@ -226,6 +227,43 @@
                <p>protected visible inside sub class, not visible inside other class</p>
                <p>internal visible from module</p>
                <p>private just visible from yourClass.kt</p>
+            </div>
+            <div id="abstract" class="tab-pane fade">
+               <h3>Visibility Modifiers</h3>
+               <xmp>
+                fun main(args: Array<String>) {
+
+                  //    var person = MyPerson()   // Not allowed. You cannot create instance of abstract class
+
+                 var person = Indian()       // Allowed. Abstract Super class reference variable
+                                // pointing to child class object.
+                 person.name = "Steve"
+                 person.eat()
+                 person.goToSchool()
+                }
+
+                abstract class MyPerson {     // you cannot create instance of abstract class
+
+                  abstract var name: String
+
+                  abstract fun eat()      // abstract properties are 'open' by default
+
+                  open fun getHeight() {} // A 'open' function ready to be overridden
+
+                  fun goToSchool() {}     // A normal function
+                }
+
+                class Indian: MyPerson() {
+
+                  override var name: String = "dummy_indian_name"
+
+                  override fun eat() {
+                    // Our own code
+                  }
+                }
+               </xmp>
+               <hr>
+               <p></p>
             </div>
          </div>
       </div>

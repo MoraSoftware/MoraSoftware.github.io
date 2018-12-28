@@ -35,6 +35,7 @@
             <li><a data-toggle="tab" href="#InheritanceSecondary">Inheritance Secondary Constructors</a></li>
             <li><a data-toggle="tab" href="#visibility">Visibility</a></li>
             <li><a data-toggle="tab" href="#abstract">Abstract</a></li>
+            <li><a data-toggle="tab" href="#interface">Interface</a></li>
          </ul>
          <div class="tab-content">
             <div id="init" class="tab-pane fade in active">
@@ -229,7 +230,7 @@
                <p>private just visible from yourClass.kt</p>
             </div>
             <div id="abstract" class="tab-pane fade">
-               <h3>Visibility Modifiers</h3>
+               <h3>Abstract Class</h3>
                <xmp>
                 fun main(args: Array<String>) {
 
@@ -263,7 +264,63 @@
                 }
                </xmp>
                <hr>
-               <p></p>
+               <p>The Role or Abstract class is to just provide set of methods and properties</p>
+               <p>Abstract Class are Partlally  defined class</p>
+               <p>Abstract Methods have no body when declared</p>
+               <p>Abstract Property cannot be initialized when declared</p>
+               <p>CONCLUSION</p>
+               <p>you cannot create intance/objects of ABSTRACT class</p>
+               <p>you need to override ABSTRACT methods, propertics inside Derived class</p>
+            </div>
+            <div id="interface" class="tab-pane fade">
+               <h3>Interface</h3>
+               <xmp>
+                fun main(args: Array<String>) {
+
+                  var myButton = MyButton()
+                  myButton.onTouch()
+                  myButton.onClick()
+                }
+
+                interface MyInterfaceListener {     // You cannot create the instance of interface
+
+                  fun onTouch()                   // Methods in interface are abstract by default
+
+                  fun onClick() {                 // Normal methods are public and open by default but NOT FINAL
+                    println("MyInterfaceListener: onClick")
+                  }
+                }
+
+                interface MySecondInterface {       // You cannot create the instance of interface
+
+                  fun onTouch() {                 // Normal Method
+                    println("MySecondInterface: onTouch")
+                  }
+
+                  fun onClick() {                 // Normal methods are public and open by default but NOT FINAL
+                    println("MySecondInterface: onClick")
+                  }
+
+                }
+
+                class MyButton: MyInterfaceListener, MySecondInterface {
+
+                  override fun onTouch() {
+                    super<MyInterfaceListener>.onClick()
+                    super<MySecondInterface>.onClick()
+                  }
+
+                  override fun onClick() {
+                    super.onTouch()
+                  }
+                }
+               </xmp>
+               <hr>
+               <p>Interface can contains both NORMAL methods and ABSTRACT methods</p>
+               <p>But they contain only ABSTRACT PROPERTY</p>
+               <p>Interface is not class</p>
+               <p>You can not  create instance of an INTERFACE</p>
+               <p>similar to an ABSTRACT class</p>
             </div>
          </div>
       </div>

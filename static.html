@@ -26,15 +26,15 @@
             </form>
          </div>
          <div class="block">
-            <h2>Static Kotlin</h2>
+            <h2>Object Kotlin</h2>
          </div>
          <ul class="nav nav-tabs">
-            <li class="active"><a data-toggle="tab" href="#init">Init</a></li>
-            <li><a data-toggle="tab" href="#inheritance">Inheritance</a></li>
+            <li class="active"><a data-toggle="tab" href="#init">Object</a></li>
+            <li><a data-toggle="tab" href="#companion">Companion Object</a></li>
          </ul>
          <div class="tab-content">
             <div id="init" class="tab-pane fade in active">
-               <h3></h3>
+               <h3>Object</h3>
                <xmp>
                 fun main(args: Array<String>) {
 
@@ -78,6 +78,31 @@
                <p>   - as we cannot create object/instance manually</p>
                <p> - object can also have super class</p>
                <p>   - Supports Inheritance</p>
+            </div>
+            <div id="companion" class="tab-pane fade in active">
+               <h3>Companion Object</h3>
+               <xmp>
+                fun main(args: Array<String>) {
+
+                  MyClass.count           // You can print it and check result
+
+                  MyClass.typeOfCustomers()
+                }
+
+                class MyClass {
+
+                  companion object {
+
+                    var count: Int = -1             // Behaves like STATIC variable
+
+                    @JvmStatic
+                    fun typeOfCustomers(): String { // Behaves like STATIC method
+                      return "Indian"
+                    }
+                  }
+                }
+               </xmp>
+               <p>When we use keywork object</p>
             </div>
           </div>
       </div>

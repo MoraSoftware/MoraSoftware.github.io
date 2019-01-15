@@ -31,6 +31,7 @@
          <ul class="nav nav-tabs">
             <li class="active"><a data-toggle="tab" href="#init">Higher order functions</a></li>
             <li><a data-toggle="tab" href="#lambda">Lambda</a></li>
+            <li><a data-toggle="tab" href="#closures">Closures</a></li>
          </ul>
          <div class="tab-content">
             <div id="init" class="tab-pane fade in active">
@@ -114,6 +115,31 @@
                </xmp>
                <hr>
                <p>Diferent ways to declare a lamda funcion in high level function</p>
+            </div>
+            <div id="closures" class="tab-pane fade">
+               <h3>Closures</h3>
+               <xmp>
+                fun main(args: Array<String>) {
+
+                  val program = TheProgram()
+
+                  var result = 0
+
+                  program.addTwoNumbers(2, 7) {x, y -> result = x + y}
+
+                  println(result)
+                }
+
+                class TheProgram {
+
+                  fun addTwoNumbers(a: Int, b: Int, action: (Int, Int) -> Unit) {  // High Level Function with Lambda as Parameter
+
+                    action(a, b)
+                  }
+                }
+               </xmp>
+               <hr>
+               <p>High Level Function with Lambda as Parameter, the function can return a variable</p>
             </div>
           </div>
       </div>

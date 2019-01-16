@@ -32,6 +32,7 @@
             <li class="active"><a data-toggle="tab" href="#init">Higher order functions</a></li>
             <li><a data-toggle="tab" href="#lambda">Lambda</a></li>
             <li><a data-toggle="tab" href="#closures">Closures</a></li>
+            <li><a data-toggle="tab" href="#it">It</a></li>
          </ul>
          <div class="tab-content">
             <div id="init" class="tab-pane fade in active">
@@ -140,6 +141,27 @@
                </xmp>
                <hr>
                <p>High Level Function with Lambda as Parameter, the function can return a variable</p>
+            </div>
+            <div id="it" class="tab-pane fade">
+               <h3>Closures</h3>
+               <xmp>
+                fun main(args: Array<String>) {
+
+                  val program = Programs()
+                  program.reverseAndDisplay("hello", { it.reversed() })
+                }
+
+                class Programs {
+
+                  fun reverseAndDisplay(str: String, myFunc: (String) -> String) {  // High Level Function with Lambda as Parameter
+
+                    val result = myFunc(str)    // it.reversed() ==> str.reversed() ==> "hello".reversed() = "olleh"
+                    println(result)
+                  }
+                }
+              </xmp>
+               <hr>
+               <p>it when a parameter a return same type of parameter (String) -> String</p>
             </div>
           </div>
       </div>

@@ -33,6 +33,7 @@
             <li><a data-toggle="tab" href="#lambda">Lambda</a></li>
             <li><a data-toggle="tab" href="#closures">Closures</a></li>
             <li><a data-toggle="tab" href="#it">It</a></li>
+            <li><a data-toggle="tab" href="#with">With Apply</a></li>
          </ul>
          <div class="tab-content">
             <div id="init" class="tab-pane fade in active">
@@ -162,6 +163,43 @@
                </xmp>
                <hr>
                <p>it when a parameter a return same type of parameter (String) -> String</p>
+            </div>
+            <div id="with" class="tab-pane fade">
+               <h3>With Apply</h3>
+               <xmp>
+                fun main(args: Array<String>) {
+
+                  var person = Perrson()
+
+                  with(person) {
+                    name = "Steve"
+                    age = 23
+                  }
+
+                  person.apply {
+                    name = "Steve"
+                    age = 23
+                  }.startRun()
+
+                  println(person.name)
+                  println(person.age)
+                }
+
+                class Perrson {
+
+                  var name: String = ""
+                  var age: Int = -1
+
+                  fun startRun() {
+                    println("Now I am ready to run")
+                  }
+                }
+               </xmp>
+               <hr>
+               <p>Apply</p>
+               <p>Calls the specified function block with this value as its receiver and returns this value.</p>
+               <p>With</p>
+               <p>Calls the specified function block with the given receiver as its receiver and returns its result.</p>
             </div>
           </div>
       </div>

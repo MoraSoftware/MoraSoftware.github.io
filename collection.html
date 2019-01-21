@@ -30,7 +30,7 @@
          </div>
          <ul class="nav nav-tabs">
             <li class="active"><a data-toggle="tab" href="#init">Collection</a></li>
-            <li><a data-toggle="tab" href="#lambda">Lambda</a></li>
+            <li><a data-toggle="tab" href="#list">List</a></li>
          </ul>
          <div class="tab-content">
             <div id="init" class="tab-pane fade in active">
@@ -59,6 +59,33 @@
                </xmp>
                <hr>
                <p>Collection</p>
+            </div>
+            <div id="list" class="tab-pane fade">
+               <h3>List</h3>
+               <xmp>
+                fun main(args: Array<String>) {
+
+                  // Elements :
+                  // Index    :   0   1   2   3   4
+
+                  //    var list = mutableListOf<String>()  // Mutable, No Fixed Size, Can Add or Remove Elements
+                  //    var list = arrayListOf<String>()    // Mutable, No Fixed Size, Can Add or Remove Elements
+                  var list = ArrayList<String>()      // Mutable, No Fixed Size, Can Add or Remove Elements
+                  list.add("Yogi")        // 0
+                  list.add("Manmohan")    // 1
+                  list.add("Vajpayee")    // 2
+
+                  //    list.remove("Manmohan")
+                  //    list.add("Vajpayee")
+
+                  list[1] = "Modi"
+
+                  for (element in list) {             // Using individual elements (Objects)
+                    println(element)
+                  }
+               </xmp>
+               <hr>
+               <p>Apply</p>
             </div>
           </div>
       </div>

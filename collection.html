@@ -91,6 +91,31 @@
                <p>mutableListOf, arrayListOf, ArrayList</p>
                <p>Mutable, READ and WRITE both, No Fixed Size</p>
             </div>
+            <div id="list" class="tab-pane fade">
+               <h3>List</h3>
+               <xmp>
+                // Map Tutorial: Key-Value pair
+                //    var myMap = HashMap<Int, String>()      // Mutable, READ and WRITE both, No Fixed Size
+                //    var myMap = mutableMapOf<Int, String>() // Mutable, READ and WRITE both, No Fixed Size
+                var myMap = hashMapOf<Int, String>()      // Mutable, READ and WRITE both, No Fixed Size
+
+                myMap.put(4, "Yogi")
+                myMap.put(43, "Manmohan")
+                myMap.put(7, "Vajpayee")
+
+                myMap.put(43, "Modi")
+
+                for (key in myMap.keys) {
+                  println("Element at $key = ${myMap[key]}")  // myMap.get(key)
+                }
+               </xmp>
+               <hr>
+               <p>mapOf </p>
+               <p>Inmutable, Fixed Size, Read ONLY</p>
+               <p></p>
+               <p>HashMap, mutableMapOf, hashMapOf</p>
+               <p>Mutable, READ and WRITE both, No Fixed Size</p>
+            </div>
           </div>
       </div>
    </body>

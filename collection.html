@@ -31,7 +31,8 @@
          <ul class="nav nav-tabs">
             <li class="active"><a data-toggle="tab" href="#init">Collection</a></li>
             <li><a data-toggle="tab" href="#list">List</a></li>
-            <li><a data-toggle="tab" href="#map">List</a></li>
+            <li><a data-toggle="tab" href="#map">Map</a></li>
+            <li><a data-toggle="tab" href="#set">Set</a></li>
          </ul>
          <div class="tab-content">
             <div id="init" class="tab-pane fade in active">
@@ -93,7 +94,7 @@
                <p>Mutable, READ and WRITE both, No Fixed Size</p>
             </div>
             <div id="map" class="tab-pane fade">
-               <h3>List</h3>
+               <h3>Map</h3>
                <xmp>
                 // Map Tutorial: Key-Value pair
                 //    var myMap = HashMap<Int, String>()      // Mutable, READ and WRITE both, No Fixed Size
@@ -115,6 +116,33 @@
                <p>Inmutable, Fixed Size, Read ONLY</p>
                <p></p>
                <p>HashMap, mutableMapOf, hashMapOf</p>
+               <p>Mutable, READ and WRITE both, No Fixed Size</p>
+            </div>
+            <div id="set" class="tab-pane fade">
+               <h3>Set</h3>
+               <xmp>
+                fun main(args: Array<String>) {
+
+                  // "Set" contains unique elements
+                  // "HashSet" also contains unique elements but sequence is not guaranteed in output
+
+                  var mySet = mutableSetOf<Int>( 2, 54, 3, 1, 0, 9, 9, 9, 8)  // Mutable Set, READ and WRITE both
+                  //    var mySet = hashSetOf<Int>( 2, 54, 3, 1, 0, 9, 9, 9, 8)     // Mutable Set, READ and WRITE both
+
+                  mySet.remove(54)
+                  mySet.add(100)
+
+                  for (element in mySet) {
+                    println(element)
+                  }
+                }
+               </xmp>
+               <hr>
+               <p>setOf -> contains unique elements</p>
+               <p>Inmutable, Fixed Size, Read ONLY</p>
+               <p></p>
+               <p>Set -> contains unique elements</p>
+               <p>HashSet -> also contains unique elements but sequence is not guaranteed in output</p>
                <p>Mutable, READ and WRITE both, No Fixed Size</p>
             </div>
           </div>

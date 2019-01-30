@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Class Kotlin</title>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" type="text/css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,300,700" type="text/css">
+      <link rel="stylesheet" href="static/app.css" type="text/css">
+      <link rel="shortcut icon" href="static/logo.png" />
+      <meta name="theme-color" content="#111111">
+      <meta name="og:type" content="website">
+      <meta name="og:title" content="MoraSoftware.github.io">
+      <meta name="og:description" content="Mora Software">
+      <meta name="og:site_name" content="Mora Software">
+      <meta name="og:url" content="{{ site.url }}">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   </head>
+   <body>
+      <div class="container">
+         <div class="block">
+            <form action="index.html">
+               <input type="image" src="static/white.jpg" />
+            </form>
+         </div>
+         <div class="block">
+            <h2>Collection Kotlin</h2>
+         </div>
+         <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#init">Filter Map</a></li>
+            <li><a data-toggle="tab" href="#list">List</a></li>
+         </ul>
+         <div class="tab-content">
+            <div id="init" class="tab-pane fade in active">
+               <h3>Filter Map</h3>
+               <xmp>
+              fun main(args: Array<String>) {
+
+                val myNumbers: List<Int> = listOf(2, 3, 4, 6, 23, 90)
+
+                val mySmallNums = myNumbers.filter { it < 10 }    // OR { num -> num < 10 }
+                for (num in mySmallNums) {
+                  println(num)
+                }
+
+                val mySquaredNums = myNumbers.map { it * it }     // OR { num -> num * num }
+                for (num in mySquaredNums) {
+                  println(num)
+                }
+
+                var people = listOf<Pperson>(Pperson(10, "Steve"), Pperson(23, "Annie"), Pperson(17, "Sam"))
+                var names = people.filter { person ->person.name.startsWith("S") }.map { it.name }
+
+                for (name in names) {
+                  println(name)
+                }
+              }
+
+              class Person(var age: Int, var name: String) {
+                // Some other code..
+              }  
+               </xmp>
+               <hr>
+               <p>Filter</p>
+               <p>You can filter the data, like a string startWith("S")</p>
+               <p></p>
+               <p>Map</p>
+               <p>You can do actions like + * / %</p>
+            </div>
+            <div id="list" class="tab-pane fade">
+               <h3>List</h3>
+               <xmp>
+               </xmp>
+               <hr>
+               <p></p>
+            </div>
+          </div>
+      </div>
+   </body>
+</html>

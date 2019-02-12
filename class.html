@@ -37,6 +37,7 @@
             <li><a data-toggle="tab" href="#abstract">Abstract</a></li>
             <li><a data-toggle="tab" href="#interface">Interface</a></li>
             <li><a data-toggle="tab" href="#data">Data Clases</a></li>
+            <li><a data-toggle="tab" href="#sealed">Sealed</a></li>
          </ul>
          <div class="tab-content">
             <div id="init" class="tab-pane fade in active">
@@ -352,6 +353,31 @@
                <p>toString:String</p>
                <p>------------------</p>
                <p>Kotlin creates a copy() too</p>
+            </div>
+            <div id="data" class="tab-pane fade">
+               <h3>Data Clases</h3>
+               <xmp>
+                sealed class Expr
+                data class Const(val number: Double) : Expr()
+                data class Sum(val e1: Expr, val e2: Expr) : Expr()
+                object NotANumber : Expr()
+
+                fun eval(expr: Expr): Double = when(expr) {
+                
+                  is Const -> expr.number
+                  is Sum -> eval(expr.e1) + eval(expr.e2)
+                  NotANumber -> Double.NaN
+                  // the `else` clause is not required because we've covered all the cases
+                }
+               </xmp>
+               <hr>
+               <p>Sealed classes are used for representing restricted class hierarchies</p>
+               <p>when a value can have one of the types from a limited set, but cannot have any other type</p>
+               <p></p>
+               <p>They are, in a sense, an extension of enum classes:</p>
+               <p>- the set of values for an enum type is also restricted,</p>
+               <p>- but each enum constant exists only as a single instance</p>
+               <p>- whereas a subclass of a sealed class can have multiple instances which can contain state</p>
             </div>
          </div>
       </div>

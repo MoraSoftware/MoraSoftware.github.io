@@ -225,11 +225,16 @@
                <xmp>
                   fun main(args: Array<String>) {
 
+                     
+
+                     fun foo(vararg strings: String) { 
+                        for(letter in strings) {
+                           println(letter)
+                        }
+                     }
+
                      foo(strings = *arrayOf("a", "b", "c"))
                   }
-
-                  fun foo(vararg strings: String) { ... }
-
                </xmp>
                <hr>
                <p>Variable number of arguments (vararg) </p>

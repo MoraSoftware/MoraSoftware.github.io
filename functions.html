@@ -36,6 +36,7 @@
             <li><a data-toggle="tab" href="#extension_function_two">Extension function two</a></li>
             <li><a data-toggle="tab" href="#infix_function">Infix function</a></li>
             <li><a data-toggle="tab" href="#tailrec_function">Tailrec function</a></li>
+            <li><a data-toggle="tab" href="#vararg_function">Vararg function</a></li>
          </ul>
          <div class="tab-content">
             <div id="functions_basics" class="tab-pane fade in active">
@@ -217,6 +218,23 @@
                <hr>
                <p>Tailrec Function : Recursive Functions</p>
                <p>* Prevents Stackoverflow Exception</p>
+            </div>
+
+            <div id="vararg_function" class="tab-pane fade">
+               <h3>Vararg</h3>
+               <xmp>
+                  fun main(args: Array<String>) {
+
+                     foo(strings = *arrayOf("a", "b", "c"))
+                  }
+
+                  fun foo(vararg strings: String) { ... }
+
+               </xmp>
+               <hr>
+               <p>Variable number of arguments (vararg) </p>
+               <p>can be passed in the named form by using the spread operator.</p>
+               <a href="https://www.youtube.com/watch?v=HaoggPuyoqg"><img src="static/youtube.png"></a>
             </div>
          </div>
       </div>

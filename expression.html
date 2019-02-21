@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Loops Kotlin</title>
+      <meta charset="utf-8">
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" type="text/css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,300,700" type="text/css">
+      <link rel="stylesheet" href="static/app.css" type="text/css">
+      <link rel="shortcut icon" href="static/logo.png" />
+      <meta name="theme-color" content="#111111">
+      <meta name="og:type" content="website">
+      <meta name="og:title" content="MoraSoftware.github.io">
+      <meta name="og:description" content="Mora Software">
+      <meta name="og:site_name" content="Mora Software">
+      <meta name="og:url" content="{{ site.url }}">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   </head>
+   <body>
+      <div class="container">
+         <div class="block">
+            <form action="index.html">
+               <input type="image" src="static/white.jpg" />
+            </form>
+         </div>
+         <div class="block">
+            <h2>Loops in Kotlin</h2>
+         </div>
+         <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#if">If</a></li>
+            <li><a data-toggle="tab" href="#for">For</a></li>
+            <li><a data-toggle="tab" href="#while">While</a></li>
+            <li><a data-toggle="tab" href="#do">Do while</a></li>
+            <li><a data-toggle="tab" href="#break_keyword">Break keyword</a></li>
+            <li><a data-toggle="tab" href="#continue_keyword">Continue keyword</a></li>
+         </ul>
+         <div class="tab-content">
+            <div id="if" class="tab-pane fade in active">
+               <h3>If</h3>
+               <xmp>val a = 2
+                  val b = 5
+                  var maxValue: Int = if (a > b) {
+                    print("a is greater")
+                    a
+                  } else {
+                    print("b is greater")
+                    b
+                  }
+                  println(maxValue)
+               </xmp>
+               <p></p>
+               <a href="https://www.youtube.com/watch?v=CkvYXSpXS2s&list=PLlxmoA0rQ-LwgK1JsnMsakYNACYGa1cjR&index=18"><img src="static/youtube.png"></a>
+            </div>
+            <div id="for" class="tab-pane fade">
+               <h3>For</h3>
+               <xmp>
+                for (i in 1..10) {
+                  if (i % 2 == 0) {
+                    println(i)
+                  }
+                }
+                  println()
+                for (i in 10 downTo 0) {
+                  if (i % 2 == 0) {
+                    println(i)
+                  }
+                }
+               </xmp>
+            </div>
+            <div id="while" class="tab-pane fade">
+               <h3>WHILE in Kotlin</h3>
+               <xmp>
+                  var i = 0
+                  while (i <= 10) {
+                    if (i % 2 == 0) {
+                      println(i)
+                    }
+                    i++
+                  }
+                  println()
+                  var j = 10
+                  while (j >= 0) {
+                    if (j % 2 == 0) {
+                      println(j)
+                    }
+                    j--
+                  }
+               </xmp>
+            </div>
+            <div id="do" class="tab-pane fade">
+               <h3>DO WHILE</h3>
+               <xmp>
+                  var i = 0
+                  do {
+                    if (i % 2 == 0) {
+                      println(i)
+                    }
+                    i++
+                  } while (i <= 10)
+                  println()
+                  var j = 10
+                  do {
+                    if (j % 2 == 0) {
+                      println(j)
+                    }
+                    j--
+                  } while (j >= 0)
+               </xmp>
+            </div>
+            <div id="break_keyword" class="tab-pane fade">
+               <h3>Break keyword</h3>
+               <xmp>
+                  for (i in 0..4) {
+                    println(i)
+
+                    if (i == 2) {
+                      break
+                    }
+                  }
+
+                  println() 
+
+                  myLoop@ for (i in 1..3) {
+                    for (j in 1..3) {
+                      println("$i  $j")
+                      if (i == 2 && j == 2)
+                        break@myLoop
+                      }
+                    }
+                  }
+               </xmp>
+            </div>
+            <div id="continue_keyword" class="tab-pane fade">
+               <h3>Continue keyword</h3>
+               <xmp>
+                  for (i in 1..3) {
+                  
+                    if (i == 2)
+                      continue
+                    
+                    println(i)
+                  }
+
+
+                  myLoop@ for (i in 1..3) {
+
+                    for (j in 1..3) {
+
+                      if (i == 2 && j == 2) {
+                        continue@myLoop
+                      }
+                      println("$i  $j")
+                    }
+                  }
+               </xmp>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>

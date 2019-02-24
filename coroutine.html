@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Class Kotlin</title>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" type="text/css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,300,700" type="text/css">
+      <link rel="stylesheet" href="static/app.css" type="text/css">
+      <link rel="shortcut icon" href="static/logo.png" />
+      <meta name="theme-color" content="#111111">
+      <meta name="og:type" content="website">
+      <meta name="og:title" content="MoraSoftware.github.io">
+      <meta name="og:description" content="Mora Software">
+      <meta name="og:site_name" content="Mora Software">
+      <meta name="og:url" content="{{ site.url }}">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   </head>
+   <body>
+      <div class="container">
+         <div class="block">
+            <form action="index.html">
+               <input type="image" src="static/white.jpg" />
+            </form>
+         </div>
+         <div class="block">
+            <h2>COROUTINES</h2>
+            <h3>CoroutineScope</h3>
+            <p>To start coroutine scope you can:</p>
+            <p>Use GlobalScope that has empty coroutine context.</p>
+            <p>Implement CoroutineScope interface. Create a scope from a context:</p>
+            <xmp>with(CoroutineScope(context = context)){}))</xmp>
+            <p></p>
+            <p></p>
+            <h3>Coroutine builders</h3>
+            <h4>launch</h4>
+            <p>*Launches new coroutine without blocking current thread and returns a reference to </p>
+            <p> the coroutine as a Job.</p>
+            <h4>runBlocking</h4>
+            <p>*Runs new coroutine and blocks current theread interruptible until its completion.</p>
+            <h4>async</h4>
+            <p>*Creates new coroutine and returns its future result as an implementation of Deferred.</p>
+            <h4>withContext</h4>
+            <p>*Change a coroutine context for some block.</p>
+            <p></p>
+            <p></p>
+            <a href="https://blog.kotlin-academy.com/kotlin-coroutines-cheat-sheet-8cf1e284dc35">Reference</a>
+         </div>
+      </div>
+   </body>
+</html>

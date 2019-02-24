@@ -31,6 +31,7 @@
          <ul class="nav nav-tabs">
             <li class="active"><a data-toggle="tab" href="#init">Scope</a></li>
             <li><a data-toggle="tab" href="#builders">Builders</a></li>
+            <li><a data-toggle="tab" href="#dispatchers">Dispatchers</a></li>
          </ul>
          <div class="tab-content">
             <div id="init" class="tab-pane fade in active">
@@ -42,22 +43,51 @@
               <p></p>
               <p></p>
               <a href="https://blog.kotlin-academy.com/kotlin-coroutines-cheat-sheet-8cf1e284dc35">Reference</a>
+               <a href="https://www.youtube.com/watch?v=jYuK1qzFrJg"><img src="static/youtube.png"></a>
             </div>
             <div id="builders" class="tab-pane fade">
               <h3>Coroutine builders</h3>
-              <b>launch</b>
-              <p>*Launches new coroutine without blocking current thread and returns a reference to </p>
+              <p></p>
+              <p> - launch</p>
+              <p>Launches new coroutine without blocking current thread and returns a reference to </p>
               <p> the coroutine as a Job.</p>
-              <b>runBlocking</b>
-              <p>*Runs new coroutine and blocks current theread interruptible until its completion.</p>
-              <b>async</b>
-              <p>*Creates new coroutine and returns its future result as an implementation of Deferred.</p>
-              <b>withContext</b>
-              <p>*Change a coroutine context for some block.</p>
+              <p></p>
+              <p> - runBlocking</p>
+              <p>Runs new coroutine and blocks current theread interruptible until its completion.</p>
+              <p></p>
+              <p> - async</p>
+              <p>Creates new coroutine and returns its future result as an implementation of Deferred.</p>
+              <p></p>
+              <p> - withContext</p>
+              <p>Change a coroutine context for some block.</p>
               <p></p>
               <p></p>
               <a href="https://blog.kotlin-academy.com/kotlin-coroutines-cheat-sheet-8cf1e284dc35">Reference</a>
-         </div>
+               <a href="https://www.youtube.com/watch?v=jYuK1qzFrJg"><img src="static/youtube.png"></a>
+            </div>
+            <div id="dispatchers" class="tab-pane fade">
+              <h3>Coroutine dispatchers</h3>
+              <p></p>
+              <p> - Dispatchers.Default</p>
+              <p>Different thread(if possible) it is backerd by a shared pool of threads on JVM.</p>
+              <p></p>
+              <p> - Dispatchers.Main</p>
+              <p>Platform specific main thread (if exists).</p>
+              <p></p>
+              <p> - Dispatchers.IO</p>
+              <p>Thread designed for offloadin blocking IO tasks to a shared pool of threads.</p>
+              <p></p>
+              <p> - Dispatchers.Unconfined</p>
+              <p>Always uses first available thread (most performant dispatcher).</p>
+              <p></p>
+              <p> - newSingleThreadContext</p>
+              <p>Creates a new coroutine execution context using a single thread with built-in yield support</p>
+              <p></p>
+              <p></p>
+              <a href="https://blog.kotlin-academy.com/kotlin-coroutines-cheat-sheet-8cf1e284dc35">Reference</a>
+               <a href="https://www.youtube.com/watch?v=jYuK1qzFrJg"><img src="static/youtube.png"></a>
+            </div>
+          </div>
       </div>
    </body>
 </html>

@@ -1,3 +1,18 @@
 body{
 	font-family: Arial, Helvetica, sans-serif;
 }
+h1 {
+  color: black;
+}
+.bigDay {
+  padding: 0 8px 0 7px;
+  display: inline;
+  background-color: #9A2A2A;
+  color: white;
+}
+.DayOfTheWeek {
+  padding: 0 8px 0 8px;
+  display: inline;
+  background-color: #9A2A2A;
+  color: white;
+}

@@ -1,21 +1,29 @@
 body{
 	font-family: Arial, Helvetica, sans-serif;
 }
-h1 {
+.torero {
   color: black;
+  margin-left: 10px;
 }
 .bigDay {
   padding: 0 8px 0 7px;
-  display: inline;
+  display: inline-block;
   background-color: #9A2A2A;
   color: white;
 }
 .DayOfTheWeek {
   padding: 0 8px 0 8px;
-  display: inline;
+  display: inline-block;
   background-color: #9A2A2A;
   color: white;
 }
 a{
   color:black;
+}
+p {
+  margin-left: 50px;
+}
+span {
+  display: inline-block;
+  margin-left: 10px;
 }

@@ -5,6 +5,15 @@ body{
   color: black;
   margin-left: 10px;
 }
+.toreroImage {
+  width: 40px;
+}
+.tvImage {
+  width: 40px;
+}
+.bigImage {
+  width: 300px;
+}
 .bigDay {
   padding: 0 8px 0 7px;
   display: inline-block;
@@ -25,6 +34,9 @@ body{
   width: 40px;
   margin-right: 10px;
 }
+.hierroImage {
+  width: 40px;
+}
 a{
   color:black;
 }
@@ -34,4 +46,7 @@ p {
 span {
   display: inline-block;
   margin-left: 10px;
+}
+div {
+  margin-left: 50px;
 }

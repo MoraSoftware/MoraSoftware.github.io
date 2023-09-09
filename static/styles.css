@@ -15,7 +15,9 @@ body{
   width: 300px;
 }
 .bigDay {
-  padding: 0 8px 0 7px;
+  width: 40px;
+  text-align: center;
+  margin-right: 7px;
   display: inline-block;
   background-color: #9A2A2A;
   color: white;

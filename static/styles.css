@@ -49,3 +49,13 @@ span {
 .space {
   margin-left: 50px;
 }
+ol {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  list-style: none;
+  padding: 0;
+}
+.first-day {
+  grid-column-start: 5
+}
+

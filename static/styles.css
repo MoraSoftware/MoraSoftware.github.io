@@ -5,6 +5,10 @@ body{
   color: black;
   margin-left: 10px;
 }
+.toreroImageRigth {
+  width: 40px;
+  margin-right: 10px;
+}
 .toreroImage {
   width: 40px;
 }

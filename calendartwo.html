@@ -66,7 +66,8 @@
             if (info.event.url) {
               /*window.open(info.event.url);*/
               var final_date = info.event.start.getFullYear()+"-"+(info.event.start.getMonth()+1)+"-"+info.event.start.getDate();
-              alert(final_date.toString())
+              /*alert(final_date.toString())*/
+              Android.showDate(final_date.toString())
             }
           }
         });

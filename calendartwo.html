@@ -192,7 +192,7 @@
 
             if (info.event.url) {
               /*window.open(info.event.url);*/
-              var final_date = info.event.start.getFullYear()+"-"+(info.event.start.getMonth()+1)+"-"+info.event.start.getDate();
+              var final_date = info.event.start.getFullYear()+"-"+("0" + (info.event.start.getMonth() + 1)).slice(-2)+"-"+("0" + info.event.start.getDate()).slice(-2);
               /*alert(final_date.toString())*/
               Android.showDate(final_date.toString())
             }
